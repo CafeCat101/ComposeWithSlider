@@ -62,16 +62,6 @@ struct QuestionView: View {
 											isSentenceFinished()
 										}
 									})
-								/*
-								SelectedWordView(selectedWord: $rememberWord)
-									.transition(.offset(x: 0, y: 50))
-									.onAppear(perform: {
-										DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-											makeSentence.append(rememberWord)
-											animateSentence = false
-											isSentenceFinished()
-										}
-									})*/
 							}
 							
 							Spacer()

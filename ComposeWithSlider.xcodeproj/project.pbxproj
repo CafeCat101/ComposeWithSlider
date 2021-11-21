@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8149976274A0F4400C4B2CA /* CorrectAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8149975274A0F4400C4B2CA /* CorrectAnswerView.swift */; };
+		C8149978274A103600C4B2CA /* WrongAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8149977274A103600C4B2CA /* WrongAnswerView.swift */; };
+		C814997A274A1DB000C4B2CA /* FinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8149979274A1DB000C4B2CA /* FinishedView.swift */; };
+		C814997C274A23E600C4B2CA /* Button Ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = C814997B274A23E600C4B2CA /* Button Ding.wav */; };
+		C814997E274A23F900C4B2CA /* Chatroom Send.wav in Resources */ = {isa = PBXBuildFile; fileRef = C814997D274A23F900C4B2CA /* Chatroom Send.wav */; };
 		C8BA6E99273AEC880099A134 /* ComposeWithSliderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BA6E98273AEC880099A134 /* ComposeWithSliderApp.swift */; };
 		C8BA6E9D273AEC8A0099A134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8BA6E9C273AEC8A0099A134 /* Assets.xcassets */; };
 		C8BA6EA0273AEC8A0099A134 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8BA6E9F273AEC8A0099A134 /* Preview Assets.xcassets */; };
@@ -23,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C8149975274A0F4400C4B2CA /* CorrectAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerView.swift; sourceTree = "<group>"; };
+		C8149977274A103600C4B2CA /* WrongAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerView.swift; sourceTree = "<group>"; };
+		C8149979274A1DB000C4B2CA /* FinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedView.swift; sourceTree = "<group>"; };
+		C814997B274A23E600C4B2CA /* Button Ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Button Ding.wav"; sourceTree = "<group>"; };
+		C814997D274A23F900C4B2CA /* Chatroom Send.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Chatroom Send.wav"; sourceTree = "<group>"; };
 		C8BA6E95273AEC880099A134 /* ComposeWithSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComposeWithSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8BA6E98273AEC880099A134 /* ComposeWithSliderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeWithSliderApp.swift; sourceTree = "<group>"; };
 		C8BA6E9C273AEC8A0099A134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +90,9 @@
 				C8BA6EB1273AF0C90099A134 /* Lesson.swift */,
 				C8BA6E9C273AEC8A0099A134 /* Assets.xcassets */,
 				C8BA6E9E273AEC8A0099A134 /* Preview Content */,
+				C8149975274A0F4400C4B2CA /* CorrectAnswerView.swift */,
+				C8149977274A103600C4B2CA /* WrongAnswerView.swift */,
+				C8149979274A1DB000C4B2CA /* FinishedView.swift */,
 			);
 			path = ComposeWithSlider;
 			sourceTree = "<group>";
@@ -95,6 +108,8 @@
 		C8BA6EA6273AEEEA0099A134 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				C814997D274A23F900C4B2CA /* Chatroom Send.wav */,
+				C814997B274A23E600C4B2CA /* Button Ding.wav */,
 				C8BA6EAB273AEFC60099A134 /* Cartoon Brass Fail.wav */,
 				C8BA6EA9273AEF960099A134 /* Bright Right Answer 4.wav */,
 				C8BA6EA7273AEF5C0099A134 /* Cartoon Big Win.wav */,
@@ -165,6 +180,8 @@
 				C8BA6EA8273AEF5C0099A134 /* Cartoon Big Win.wav in Resources */,
 				C8BA6EAA273AEF960099A134 /* Bright Right Answer 4.wav in Resources */,
 				C8BA6EAC273AEFC60099A134 /* Cartoon Brass Fail.wav in Resources */,
+				C814997E274A23F900C4B2CA /* Chatroom Send.wav in Resources */,
+				C814997C274A23E600C4B2CA /* Button Ding.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +194,11 @@
 			files = (
 				C8BA6EB2273AF0C90099A134 /* Lesson.swift in Sources */,
 				C8BA6EB0273AF05E0099A134 /* LessonToday.swift in Sources */,
+				C814997A274A1DB000C4B2CA /* FinishedView.swift in Sources */,
 				C8BA6EB4273AF0F80099A134 /* MyTheme.swift in Sources */,
 				C8BA6EB8273AF2D30099A134 /* QuestionView.swift in Sources */,
+				C8149978274A103600C4B2CA /* WrongAnswerView.swift in Sources */,
+				C8149976274A0F4400C4B2CA /* CorrectAnswerView.swift in Sources */,
 				C8BA6E99273AEC880099A134 /* ComposeWithSliderApp.swift in Sources */,
 				C8BA6EAE273AEFF10099A134 /* SoundManager.swift in Sources */,
 				C8BA6EBA273AF2DF0099A134 /* AnswerView.swift in Sources */,

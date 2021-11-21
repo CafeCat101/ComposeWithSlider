@@ -95,14 +95,11 @@ struct QuestionView: View {
 							
 							if showAnswerBtn==true {
 								Button(action: {
-									/*if self.answer == lessonToday.quiz[lessonToday.currentLessonAt].answer {
-									 lessonToday.quiz[lessonToday.currentLessonAt].status = 1
-									 }else{
-									 lessonToday.quiz[lessonToday.currentLessonAt].status = -1
-									 }
-									 withAnimation{
-									 self.goToView = "AnswerView"
-									 }*/
+									if (makeSentence.joined(separator: "")==lessonToday.quiz[lessonToday.at].answer.joined(separator: "")) && lessonToday.at==lessonToday.quiz.count-1 {
+										goToView = "FinishedView"
+									}else{
+										showAnswer = true
+									}
 								}) {
 									RoundedRectangle(cornerRadius: 22, style: .continuous)
 										.strokeBorder(Color.white,lineWidth: 1)
@@ -189,10 +186,26 @@ struct QuestionView: View {
 						.resizable()
 				)
 				.sheet(isPresented: $showAnswer){
-					AnswerView()
+					if makeSentence.joined(separator: "")==lessonToday.quiz[lessonToday.at].answer.joined(separator: "") {
+						CorrectAnswerView(isPresented: $showAnswer)
+							.onDisappear(perform: {
+								lessonToday.at = lessonToday.at + 1
+								resetQuestionValue()
+							})
+					}else{
+						WrongAnswerView(isPresented:$showAnswer, getMakeSentence: makeSentence)
+							.onDisappear(perform: {
+								lessonToday.quiz.append(lessonToday.quiz[lessonToday.at])
+								lessonToday.at = lessonToday.at + 1
+								resetQuestionValue()
+							})
+					}
+					
 				}
 		}else{
-			
+			if goToView=="FinishedView" {
+				FinishedView()
+			}
 		}
 	}
 	
@@ -200,11 +213,13 @@ struct QuestionView: View {
 		let chooseWord = lessonToday.quiz[lessonToday.at].answer[Int(sideBarValue.rounded())]
 		if makeSentence.contains(chooseWord){
 			//word exists. play ding sound
+			SoundManager.instance.playSound(sound: lessonToday.myTheme.duplicatedWord)
 		}else{
 			//makeSentence.append(chooseWord)
 			rememberWord = chooseWord
 			print(chooseWord)
 			print(makeSentence.count)
+			SoundManager.instance.playSound(sound: lessonToday.myTheme.chooseWord)
 			withAnimation{
 				animateSentence = true
 			}
@@ -221,6 +236,12 @@ struct QuestionView: View {
 				showAnswerBtn = false
 			}
 		}
+	}
+	
+	private func resetQuestionValue(){
+		makeSentence = []
+		showAnswerBtn = false
+		sideBarValue = 0.0
 	}
 }
 

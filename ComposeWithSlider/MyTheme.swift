@@ -10,6 +10,12 @@ import SwiftUI
 
 struct MyTheme{
 	var themeName = "default"
+	
+	var correctAnswerAudio:String = "Bright Right Answer 4"
+	var wrongAnswerAudio:String = "Cartoon Brass Fail"
+	var finishedLessonAudio:String = "Cartoon Big Win"
+	var chooseWord:String = "Chatroom Send"
+	var duplicatedWord:String = "Button Ding"
 	/*
 	var arrowButtonStroke:Color = Color.yellow
 	var arrowButtonBackground:Color = .arrowButton
@@ -24,10 +30,6 @@ struct MyTheme{
 	
 	var firstPageBackground:String = "tileable_bg61"
 	var contentPageBackground:String = "old_paper_background2"
-	
-	var correctAnswerAudio:String = "Bright Right Answer 4"
-	var wrongAnswerAudio:String = "Cartoon Brass Fail"
-	var finishedLessonAudio:String = "Cartoon Big Win"
 	
 	var wrongAnswerBackground:String = "wrong_answer_background"
 	

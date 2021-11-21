@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct ComposeWithSliderApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+	@StateObject var lessonToday = LessonToday()
+	var body: some Scene {
+		WindowGroup {
+			WelcomeView().environmentObject(lessonToday)
+		}
+	}
 }

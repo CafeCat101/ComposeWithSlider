@@ -36,7 +36,7 @@ struct CorrectAnswerView: View {
 		.padding(20)
 		.frame(minWidth:400, minHeight:400)
 		.background(
-			Image("chalkboard05")
+			Image("chalkboard02_green")
 				.resizable()
 		)
 		.onAppear(perform: {

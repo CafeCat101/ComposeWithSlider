@@ -102,7 +102,7 @@ struct WrongAnswerView: View {
 		}
 		.padding(20)
 		.background(
-			Image("chalkboard05")
+			Image("chalkboard02_green")
 				.resizable()
 		)
 		.onAppear(perform: {

@@ -56,7 +56,7 @@ struct QuestionView: View {
 									.foregroundColor(Color.white)
 									.transition(.offset(x: 0, y: 50))
 									.onAppear(perform: {
-										DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+										DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
 											makeSentence.append(rememberWord)
 											animateSentence = false
 											isSentenceFinished()
@@ -138,7 +138,7 @@ struct QuestionView: View {
 									print(sideBarValue)
 									if editing == false {
 										//stop dragging
-										self.pickAWord()
+										//self.pickAWord()
 									}else{
 										//dragging
 										animateSentence = false
@@ -172,7 +172,7 @@ struct QuestionView: View {
 				Spacer()
 			}.padding(10)
 				.background(
-					Image("chalkboard05")
+					Image("chalkboard02_green")
 						.resizable()
 				)
 				.sheet(isPresented: $showAnswer){

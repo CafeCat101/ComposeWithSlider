@@ -31,7 +31,7 @@ struct FinishedView: View {
 		}
 		.padding(10)
 		.background(
-			Image("chalkboard05")
+			Image("chalkboard02_green")
 				.resizable()
 		)
 		.onAppear(perform: {

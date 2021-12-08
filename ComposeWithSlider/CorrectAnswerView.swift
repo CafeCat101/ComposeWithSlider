@@ -14,7 +14,7 @@ struct CorrectAnswerView: View {
 	var body: some View {
 		VStack{
 			Image("badge_correct_answer")
-			
+			/*
 			Button(action: {
 				withAnimation{
 					isPresented = false
@@ -32,15 +32,21 @@ struct CorrectAnswerView: View {
 					)
 			}
 			.buttonStyle(PlainButtonStyle())
+			 */
 		}
 		.padding(20)
 		.frame(minWidth:400, minHeight:400)
 		.background(
-			Image("chalkboard02_green")
+			Image(lessonToday.myTheme.contentPageBackground)
 				.resizable()
 		)
 		.onAppear(perform: {
 			SoundManager.instance.playSound(sound: lessonToday.myTheme.correctAnswerAudio)
+			DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
+				withAnimation{
+					isPresented = false
+				}
+			}
 		})
 	}
 }

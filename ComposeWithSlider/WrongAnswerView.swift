@@ -102,7 +102,7 @@ struct WrongAnswerView: View {
 		}
 		.padding(20)
 		.background(
-			Image("chalkboard02_green")
+			Image(lessonToday.myTheme.contentPageBackground)
 				.resizable()
 		)
 		.onAppear(perform: {

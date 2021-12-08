@@ -30,7 +30,7 @@ class LessonToday: ObservableObject {
 				subject = decodedData.subject
 				quiz = decodedData.quiz
 				//quiz.shuffle()
-				myTheme = MyTheme(themeName: decodedData.theme)
+				myTheme = MyTheme(setThemeName: decodedData.theme)
 			}
 		} catch {
 			print(error)

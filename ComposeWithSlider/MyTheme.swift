@@ -16,6 +16,7 @@ struct MyTheme{
 	var finishedLessonAudio:String = "Cartoon Big Win"
 	var chooseWord:String = "Chatroom Send"
 	var duplicatedWord:String = "Button Ding"
+	var contentPageBackground:String = "chalkboard05"
 	/*
 	var arrowButtonStroke:Color = Color.yellow
 	var arrowButtonBackground:Color = .arrowButton
@@ -32,22 +33,22 @@ struct MyTheme{
 	var contentPageBackground:String = "old_paper_background2"
 	
 	var wrongAnswerBackground:String = "wrong_answer_background"
-	
+	*/
 	
 	init(setThemeName:String? = "default"){
-		if setThemeName == "blueCircle"{
-			firstPageBackground = "t2_welcome_bg"
+		if setThemeName == "green"{
+			/*firstPageBackground = "t2_welcome_bg"
 			arrowButtonStroke = Color("t2_arrow_btn_stroke")
 			arrowButtonBackground = Color("t2_arrow_btn_background")
-			arrowButtonOpacity = 0.4
+			arrowButtonOpacity = 0.4*/
 			
-			contentPageBackground = "t2_sky_blue_background"
-			contentTextColor = Color("t2_content_main_text")
+			contentPageBackground = "chalkboard02_green"
+			/*contentTextColor = Color("t2_content_main_text")
 			contentButtonBackground = Color("t2_content_btn_background")
-			contentButtonStroke = Color("t2_content_btn_stroke")
+			contentButtonStroke = Color("t2_content_btn_stroke")*/
 		}
 	}
-	*/
+	
 
 	
 	

@@ -31,7 +31,7 @@ struct QuestionView: View {
 							.aspectRatio(contentMode: .fit)
 							.shadow(color:.black, radius: 3, x:1, y: 1)
 							.border(Color.white, width: 5)
-							.frame(width:300, height:300)
+							.frame(width:400, height:400)
 					}
 					Spacer().frame(width:20)
 					
@@ -134,8 +134,13 @@ struct QuestionView: View {
 							}.buttonStyle(PlainButtonStyle())
 							
 							HStack{
+								Text(minValueLabel())
+									.foregroundColor(Color.gray)
+									.font(.system(size:24))
+								
 								Slider(value: $sideBarValue, in:0.0...Double(lessonToday.quiz[lessonToday.at].answer.count-1), onEditingChanged: { editing in
 									print(sideBarValue)
+									
 									if editing == false {
 										//stop dragging
 										//self.pickAWord()
@@ -151,6 +156,10 @@ struct QuestionView: View {
 												RoundedRectangle(cornerRadius: 25, style: .continuous)
 													.foregroundColor(Color("sliderBackground")))
 									)
+								
+								Text(maxValueLabel())
+									.foregroundColor(Color.gray)
+									.font(.system(size:24))
 							}
 							.frame(width:500)
 							
@@ -172,7 +181,7 @@ struct QuestionView: View {
 				Spacer()
 			}.padding(10)
 				.background(
-					Image("chalkboard02_green")
+					Image(lessonToday.myTheme.contentPageBackground)
 						.resizable()
 				)
 				.sheet(isPresented: $showAnswer){
@@ -232,6 +241,14 @@ struct QuestionView: View {
 		makeSentence = []
 		showAnswerBtn = false
 		sideBarValue = 0.0
+	}
+	
+	private func minValueLabel()->String{
+		return String(Int(sideBarValue.rounded())+1)+"/"+String(lessonToday.quiz[lessonToday.at].answer.count)
+	}
+	
+	private func maxValueLabel()->String{
+		return String(lessonToday.quiz[lessonToday.at].answer.count)+"/"+String(lessonToday.quiz[lessonToday.at].answer.count)
 	}
 }
 

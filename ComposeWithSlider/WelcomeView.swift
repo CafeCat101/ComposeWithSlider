@@ -48,7 +48,7 @@ struct WelcomeView: View {
 				Spacer()
 			}
 			.background(
-				Image("chalkboard02_green")
+				Image(lessonToday.myTheme.contentPageBackground)
 					.resizable()
 			)
 		}else{

@@ -31,7 +31,7 @@ struct QuestionView: View {
 							.aspectRatio(contentMode: .fit)
 							.shadow(color:.black, radius: 3, x:1, y: 1)
 							.border(Color.white, width: 5)
-							.frame(width:400, height:400)
+							.frame(width:500, height:500)
 					}
 					Spacer().frame(width:20)
 					
@@ -43,7 +43,7 @@ struct QuestionView: View {
 							Spacer()
 						}
 						
-						Spacer().frame(height:50)
+						Spacer().frame(height:40)
 						
 						HStack{
 							Text("\(makeSentence.joined(separator: ""))")
@@ -114,14 +114,14 @@ struct QuestionView: View {
 								.strokeBorder(Color.white,lineWidth: 1)
 						)
 						
-						Spacer().frame(height:50)
+						Spacer().frame(height:150)
 						
 						VStack{
 							Button(action:{
 								self.pickAWord()
 							}){
 								Text("\(lessonToday.quiz[lessonToday.at].answer[Int(sideBarValue.rounded())])")
-									.font(.system(size:40))
+									.font(.system(size:50))
 									.padding(10)
 									.foregroundColor(Color.black)
 									.background(
@@ -161,7 +161,7 @@ struct QuestionView: View {
 									.foregroundColor(Color.gray)
 									.font(.system(size:24))
 							}
-							.frame(width:500)
+							/*.frame(width:500)*/
 							
 						}
 						.padding(20)
